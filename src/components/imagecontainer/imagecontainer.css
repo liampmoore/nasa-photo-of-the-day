@@ -1,9 +1,22 @@
-.imagecontainer {
+.imageContainer {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .image {
     max-width: 750px;
-    margin: 0 auto;
     display: block;
+}
+
+.button {
+    display: block;
+    background-color: red;
+    width: 5%;
+    text-align: center;
 }

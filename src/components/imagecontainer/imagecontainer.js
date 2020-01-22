@@ -6,6 +6,9 @@ import "./imagecontainer.css"
 
 export default function ImageContainer() {
     const [date, setDate] = useState(Moment().format("YYYY-DD-MM"));
+    const [dateMod, setDateMod] = useState(0);
+
+
     const [image, setImage] = useState({});
 
     useEffect( () => {
@@ -19,6 +22,10 @@ export default function ImageContainer() {
     }, [date]);
 
     return (
-        <div className="imageContainer"><Image image={image}/></div>
+        <div className="imageContainer">
+            <button className="button">Previous</button>
+            <Image image={image}/>
+            <button className="button">Next</button>
+        </div>
     )
 }
