@@ -1,12 +1,12 @@
 import React from "react";
-import Data from "./data";
 import Header from "./components/header/header"
+import ImageContainer from "./components/imagecontainer/imagecontainer";
 
 function App() {
-  Data({date:"&date=2012-03-14"});
   return (
       <>
         <Header/>
+        <ImageContainer />
 
       </>
   );
