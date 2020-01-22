@@ -1,14 +1,14 @@
 import React from "react";
-import "./App.css";
+import Data from "./data";
+import Header from "./components/header/header"
 
 function App() {
+  Data({date:"&date=2012-03-14"});
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-    </div>
+      <>
+        <Header/>
+
+      </>
   );
 }
 
