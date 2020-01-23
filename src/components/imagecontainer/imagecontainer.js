@@ -5,27 +5,30 @@ import Image from "./image";
 import "./imagecontainer.css"
 
 export default function ImageContainer() {
-    const [date, setDate] = useState(Moment().format("YYYY-DD-MM"));
     const [dateMod, setDateMod] = useState(0);
 
 
     const [image, setImage] = useState({});
 
     useEffect( () => {
-    Axios.get('https://api.nasa.gov/planetary/apod?api_key=St7FqTCHeiFO0alwjwTlvi7oe0aCXpx4bgaC5hFA' )
+        console.log(Moment().add(dateMod, 'days').format('YYYY-MM-DD'));
+    Axios.get('https://api.nasa.gov/planetary/apod?api_key=St7FqTCHeiFO0alwjwTlvi7oe0aCXpx4bgaC5hFA&date=' + Moment().add(dateMod, 'days').format('YYYY-MM-DD'))
     .then(response => {
         setImage(response.data);
     })
     .catch(error => {
         console.log(error);
     })
-    }, [date]);
+    }, [dateMod]);
+
 
     return (
+        <>
         <div className="imageContainer">
-            <button className="button">Previous</button>
+            <button className="button" onClick={() => {setDateMod(dateMod - 1)}}>Previous</button>
             <Image image={image}/>
-            <button className="button">Next</button>
+            <button className="button" onClick={() => {setDateMod(dateMod + 1)}}>Next</button>
         </div>
+        </>
     )
 }
