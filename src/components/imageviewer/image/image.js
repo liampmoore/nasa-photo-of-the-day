@@ -9,7 +9,7 @@ export default function Image(props) {
         object-fit: scale;
         position: absolute;
     `;
-
+    //1.8 aspect ratio on video
     const Video = styled.iframe`
         height: 525px;
         width: 945px;

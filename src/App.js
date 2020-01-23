@@ -1,17 +1,20 @@
 import React, {useState, useEffect} from "react";
+import styled from "styled-components";
 
-
-import Header from "./components/header/header"
-
-
-import "./App.css";
 import ImageViewer from "./components/imageviewer/imageviewer"
 
-function App() {
 
+const Header = styled.header``;
+const Title = styled.h1``;
+
+function App() {
+  
+ 
   return (
     <>
-    <Header/>
+    <Header>
+      <Title className="headertext">NASA APOD </Title>
+    </Header>
     <ImageViewer/>
     </>
   )

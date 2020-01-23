@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Axios from "axios";
 import Moment from "moment";
-import styled from 'styled-components'
 
 import Image from "./image/image";
 import ChooseDate from "./choosedate/choosedate"
@@ -26,8 +25,12 @@ export default function ImageViewer() {
   //Rendered multiple components one after the other
   return (
       <>
+        <div style={{marginBottom: "1.4rem"}} >
         <ChooseDate dateMod={dateMod} setDateMod={setDateMod}/>
+        </div>
+        <div>
         <Image image={image}/>
+        </div>
       </>
   );
 }
