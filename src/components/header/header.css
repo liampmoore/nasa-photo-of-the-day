@@ -1,6 +1,5 @@
 .header {
-    max-width: 750px;
-    margin: 0 auto;
+    background-color: white;
 }
 .headertext {
     font-size: 3rem;

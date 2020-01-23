@@ -10,7 +10,7 @@ export default function Image(props) {
     }
     else if (props.image.url.substr(0, 19) === "https://www.youtube") {
         return (
-            <iframe height="500" width="900" src={props.image.url}/>
+            <iframe className="image" height="500" width="900" src={props.image.url}/>
             )
     }
     else {

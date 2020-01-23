@@ -2,12 +2,11 @@ import React, {useState, useEffect} from "react";
 import Axios from "axios";
 import Moment from "moment";
 import Image from "./image";
+import ChooseDate from "./choosedate"
 import "./imagecontainer.css"
 
 export default function ImageContainer() {
     const [dateMod, setDateMod] = useState(0);
-
-
     const [image, setImage] = useState({});
 
     useEffect( () => {
@@ -24,10 +23,12 @@ export default function ImageContainer() {
 
     return (
         <>
+        <p className="datetext"><a  href="https://api.nasa.gov/#apod">https://api.nasa.gov/#apod</a></p>
+<p className="datetext">{Moment().add(dateMod, 'days').format('MMMM Do YYYY')}{(dateMod === 0) ? ': Today' : ''}</p>
         <div className="imageContainer">
-            <button className="button" onClick={() => {setDateMod(dateMod - 1)}}>Previous</button>
+            <ChooseDate dateMod={dateMod} setDateMod={setDateMod}/>
             <Image image={image}/>
-            <button className="button" onClick={() => {setDateMod(dateMod + 1)}}>Next</button>
+            
         </div>
         </>
     )
