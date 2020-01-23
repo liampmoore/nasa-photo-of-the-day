@@ -1,14 +1,14 @@
 import React from "react";
-import "./imagecontainer.css";
+import "./image.css";
 
 export default function Image(props) {
-    console.log(props.image.url)
+    /* Depending on whether the image of the day is an actual image or a youtube video the image component will either render an img tag or an iframe */
     if (!props.image.url) {
         return (
             <img className="image"/>
             )
     }
-    else if (props.image.url.substr(0, 19) === "https://www.youtube") {
+    else if (props.image.url.substr(12, 7) === "youtube") {
         return (
             <iframe className="image" height="500" width="900" src={props.image.url}/>
             )
