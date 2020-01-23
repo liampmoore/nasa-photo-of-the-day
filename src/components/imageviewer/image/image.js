@@ -5,7 +5,15 @@ import styled from "styled-components";
 export default function Image(props) {
 
     const Img = styled.img`
-        height: 70vh;
+        height: 525px;
+        object-fit: scale;
+        position: absolute;
+    `;
+
+    const Video = styled.iframe`
+        height: 525px;
+        width: 945px;
+        position: absolute;
         object-fit: scale;
     `;
 
@@ -18,7 +26,7 @@ export default function Image(props) {
     }
     else if (props.image.url.substr(12, 7) === "youtube") {
         return (
-            <iframe className="image" height="500" width="900" src={props.image.url}/>
+            <Video className="image" frameBorder="0" src={props.image.url}/>
             )
     }
     else {
