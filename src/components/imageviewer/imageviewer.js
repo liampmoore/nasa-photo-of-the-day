@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Axios from "axios";
 import Moment from "moment";
+import styled from 'styled-components'
 
 import Image from "./image/image";
 import ChooseDate from "./choosedate/choosedate"
