@@ -15,7 +15,7 @@ function App() {
   const [dateMod, setDateMod] = useState(0);
   const [image, setImage] = useState({});
 
-  //Set up useEffect in top level
+  //Set up useEffect in top level, used moment.js for date formatting and easy methods for incrementing and decrementing from the current date
   useEffect( () => {
       console.log(Moment().add(dateMod, 'days').format('YYYY-MM-DD'));
   Axios.get('https://api.nasa.gov/planetary/apod?api_key=St7FqTCHeiFO0alwjwTlvi7oe0aCXpx4bgaC5hFA&date=' + Moment().add(dateMod, 'days').format('YYYY-MM-DD'))
