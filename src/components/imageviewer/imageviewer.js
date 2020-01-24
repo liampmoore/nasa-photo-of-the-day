@@ -1,9 +1,19 @@
 import React, {useState, useEffect} from "react";
 import Axios from "axios";
 import Moment from "moment";
+import styled from "styled-components";
 
 import Image from "./image/image";
 import ChooseDate from "./choosedate/choosedate"
+
+
+const ViewerContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+`;
 
 export default function ImageViewer() {
     //Set up state in top level of imageviewer
@@ -24,13 +34,9 @@ export default function ImageViewer() {
 
   //Rendered multiple components one after the other
   return (
-        <div>
-            <div style={{marginBottom: "1.4rem"}} >
-                <ChooseDate dateMod={dateMod} setDateMod={setDateMod}/>
-            </div>
-            <div>
-                <Image image={image}/>
-            </div>
-        </div>
+        <ViewerContainer>
+            <ChooseDate dateMod={dateMod} setDateMod={setDateMod}/>
+            <Image image={image}/>
+        </ViewerContainer>
   );
 }

@@ -1,19 +1,18 @@
 import React from "react";
-import "./image.css";
 import styled from "styled-components";
 
 export default function Image(props) {
-
+    
     const Img = styled.img`
+        display: block;
         height: 525px;
         object-fit: scale;
-        position: absolute;
     `;
     //1.8 aspect ratio on video
     const Video = styled.iframe`
+        display: block;
         height: 525px;
         width: 945px;
-        position: absolute;
         object-fit: scale;
     `;
 
