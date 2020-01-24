@@ -1,15 +1,36 @@
 import React from "react";
-import "./App.css";
+import styled from "styled-components";
+
+import ImageViewer from "./components/imageviewer/imageviewer"
+
+const Container = styled.div`
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: #c8af9b;
+`;
+const Header = styled.header`
+  width: 100%;
+`;
+const Title = styled.h1`
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 0;
+`;
 
 function App() {
+  
+ 
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-    </div>
-  );
+    <Container>
+    <Header>
+      <Title>NASA APOD</Title>
+    </Header>
+    <ImageViewer/>
+    </Container>
+  )
 }
 
 export default App;
