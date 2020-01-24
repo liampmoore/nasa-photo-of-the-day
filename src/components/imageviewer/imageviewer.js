@@ -24,13 +24,13 @@ export default function ImageViewer() {
 
   //Rendered multiple components one after the other
   return (
-      <>
-        <div style={{marginBottom: "1.4rem"}} >
-        <ChooseDate dateMod={dateMod} setDateMod={setDateMod}/>
-        </div>
         <div>
-        <Image image={image}/>
+            <div style={{marginBottom: "1.4rem"}} >
+                <ChooseDate dateMod={dateMod} setDateMod={setDateMod}/>
+            </div>
+            <div>
+                <Image image={image}/>
+            </div>
         </div>
-      </>
   );
 }

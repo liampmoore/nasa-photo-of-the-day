@@ -4,7 +4,9 @@ import styled from "styled-components";
 import ImageViewer from "./components/imageviewer/imageviewer"
 
 
-const Header = styled.header``;
+const Header = styled.header`
+  margin-left: 5%;
+`;
 const Title = styled.h1``;
 
 function App() {
@@ -13,7 +15,7 @@ function App() {
   return (
     <>
     <Header>
-      <Title className="headertext">NASA APOD </Title>
+      <Title>NASA APOD</Title>
     </Header>
     <ImageViewer/>
     </>
