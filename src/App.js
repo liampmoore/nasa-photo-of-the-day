@@ -12,12 +12,13 @@ const Container = styled.div`
   background-color: #c8af9b;
 `;
 const Header = styled.header`
-  display: block;
   width: 100%;
-  text-align: center; 
-  
 `;
-const Title = styled.h1``;
+const Title = styled.h1`
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 0;
+`;
 
 function App() {
   
